@@ -52,15 +52,15 @@ export const getOrders = () => {
 }
 
 //set functions
-export const setPaintColors = (id) => {
+export const setPaintColor = (id) => {
     database.orders.paintColorId = id
 }
-export const setInteriors = (id) => {
+export const setInterior = (id) => {
     database.orders.interiorId = id
 }
-export const setTechnologies = (id) => {
+export const setTechnologie = (id) => {
     database.orders.technologyId = id
 }
-export const setWheels = (id) => {
+export const setWheel = (id) => {
     database.orders.wheelId = id
 }

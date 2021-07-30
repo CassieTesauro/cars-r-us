@@ -1,4 +1,4 @@
-import { getInteriors } from "./database.js"; //import interiors state from database
+import { getInteriors, setInterior } from "./database.js"; //import interiors state from database
 
 const interiors = getInteriors() //put return of interiors state exporting function in instantiated variable
 
@@ -7,7 +7,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "interior") {
-            window.alert(`You R choosing the interior ${event.target.value}`)
+            setInterior(psreseInt(event.target.value))
         }
     }
 )
