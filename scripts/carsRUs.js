@@ -2,10 +2,10 @@
 
 //The state from other js modules where we specified what to do with the data from our different ERD tables/database object arrays needs to be imported to this page.
 
-import { paintColors } from "./paintColors.js"
-import { interiors } from "./interiors.js"
-import { technologies } from "./technologies.js"
-import { wheels } from "./wheels.js"
+import { PaintColors } from "./paintColors.js"
+import { Interiors } from "./interiors.js"
+import { Technologies } from "./technologies.js"
+import { Wheels } from "./wheels.js"
 //import { orders } from "./orders.js"
 
 

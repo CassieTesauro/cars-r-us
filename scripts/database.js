@@ -30,12 +30,11 @@ const database = {
             interiorId: 3,
             technologyId: 4,
             wheelId: 2,
-            timestamp: 2807202110118
         }
     ],
 
 }
-
+//get functions
 export const getPaintColors = () => {
     return database.paintColors.map(paintColor => ({ ...paintColor }))
 }
@@ -50,4 +49,18 @@ export const getWheels = () => {
 }
 export const getOrders = () => {
     return database.orders.map(order => ({ ...order }))
+}
+
+//set functions
+export const setPaintColors = (id) => {
+    database.orders.paintColorId = id
+}
+export const setInteriors = (id) => {
+    database.orders.interiorId = id
+}
+export const setTechnologies = (id) => {
+    database.orders.technologyId = id
+}
+export const setWheels = (id) => {
+    database.orders.wheelId = id
 }
