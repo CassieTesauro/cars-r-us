@@ -1,4 +1,4 @@
-import { getTechnologies } from "./database.js"; //import technologies state from database
+import { getTechnologies, setTechnology } from "./database.js"; //import technologies state from database
 
 const technologies = getTechnologies() //put return of technologies state exporting function in instantiated variable
 
@@ -7,7 +7,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "techology") {
-            window.alert(`You R choosing the technology ${event.target.value}`)
+            setTechnology(parseInt(event.target.value))
         }
     }
 )

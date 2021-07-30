@@ -1,4 +1,4 @@
-import { getWheels } from "./database.js"; //import wheels state from database
+import { getWheels, setWheel } from "./database.js"; //import wheels state from database
 
 const wheels = getWheels() //put return of wheels state exporting function in instantiated variable
 
@@ -7,7 +7,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "wheel") {
-            window.alert(`You R choosing the wheel ${event.target.value}`)
+            setWheel(parseInt(event.target.name))
         }
     }
 )

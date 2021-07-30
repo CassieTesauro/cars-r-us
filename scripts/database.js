@@ -58,7 +58,7 @@ export const setPaintColor = (id) => {
 export const setInterior = (id) => {
     database.orders.interiorId = id
 }
-export const setTechnologie = (id) => {
+export const setTechnology = (id) => {
     database.orders.technologyId = id
 }
 export const setWheel = (id) => {
