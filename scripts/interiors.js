@@ -1,8 +1,8 @@
-import { getInteriors } from "./database.js"; //import paint colors state from database
+import { getInteriors } from "./database.js"; //import interiors state from database
 
-const interiors = getInteriors() //put return of paint colors state exporting function in instantiated variable
+const interiors = getInteriors() //put return of interiors state exporting function in instantiated variable
 
-//make an event listener for when a user seelects a paint color from the paint color radio button html
+//make an event listener for when a user seelects a paint color from the interior radio button html
 document.addEventListener(
     "change",
     (event) => {
@@ -12,7 +12,7 @@ document.addEventListener(
     }
 )
 
-//Define the function that will put the list of paint color options into the html.  This gets imported on the main.js to be called in our html layout 
+//Define the function that will put the list of interior options into the html.  This gets imported on the main.js to be called in our html layout 
 export const Interiors = () => {
     let html = "<ul>"
 
