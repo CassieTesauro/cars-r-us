@@ -1,4 +1,4 @@
-import { getPaintColors } from "./database.js"; //import paint colors state from database
+import { getPaintColors, setPaintColor } from "./database.js"; //import paint colors state from database
 
 const paintColors = getPaintColors() //put return of paint colors state exporting function in instantiated variable
 
@@ -7,7 +7,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "paintColor") {
-            window.alert(`You R choosing the paint color ${event.target.value}`)
+            setPaintColor(parseInt(event.target.value))
         }
     }
 )
