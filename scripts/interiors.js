@@ -7,7 +7,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "interior") {
-            setInterior(psreseInt(event.target.value))
+            setInterior(parseInt(event.target.value))
         }
     }
 )

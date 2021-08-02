@@ -50,21 +50,21 @@ export const getWheels = () => {
     return database.wheels.map(wheel => ({ ...wheel }))
 }
 export const getOrders = () => {
-    return database.orders.map(order => ({ ...order }))
+    return database.customOrders.map(customOrder => ({ ...customOrder }))
 }
 
 //set functions
 export const setPaintColor = (id) => {
-    database.orders.paintColorId = id
+    database.customOrders.paintColorId = id
 }
 export const setInterior = (id) => {
-    database.orders.interiorId = id
+    database.customOrders.interiorId = id
 }
 export const setTechnology = (id) => {
-    database.orders.technologyId = id
+    database.customOrders.technologyId = id
 }
 export const setWheel = (id) => {
-    database.orders.wheelId = id
+    database.customOrders.wheelId = id
 }
 
 //function for orderBuilder --> orders, AKA transient --> permanent order state
