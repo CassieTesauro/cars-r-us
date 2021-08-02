@@ -6,7 +6,8 @@ import { PaintColors } from "./paintColors.js"
 import { Interiors } from "./interiors.js"
 import { Technologies } from "./technologies.js"
 import { Wheels } from "./wheels.js"
-//import { orders } from "./orders.js"
+import { Orders } from "./orders.js"
+import { addCustomOrder } from "./database.js"
 
 
 //We need an exportable function that will return our basic html.  Within the html, we'll interpolate a function from each of the modules imported above.  Those inner functions are responsible for getting the data we need from the database and making an html list with it to be plugged in to the html on this page.
@@ -39,8 +40,9 @@ export const carsRUs = () => {
         <button id="orderButton">Build My Car</button>
     </article>
 
-    <article class="orders">
+    <article class="customOrders">
         <h2>Completed Car Orders</h2>
+        ${Orders()} 
     </article>
 `
 

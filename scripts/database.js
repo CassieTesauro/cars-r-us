@@ -23,15 +23,17 @@ const database = {
         {id: 3, name: "V18-inch Pair Spoke Silver", price: 450},
         {id: 4, name: "18-inch Pair Spoke Black", price: 500}
     ],
-    orders: [
+    customOrders: [ //for permantent completed orders
         {
             id: 1,
             paintColorId: 2,
             interiorId: 3,
             technologyId: 4,
             wheelId: 2,
+            timestamp: 1627677543583
         }
     ],
+    orderBuilder: {} //for transient orders-in-progress
 
 }
 //get functions
@@ -63,4 +65,22 @@ export const setTechnology = (id) => {
 }
 export const setWheel = (id) => {
     database.orders.wheelId = id
+}
+
+//function for orderBuilder --> orders, AKA transient --> permanent order state
+
+export const addCustomOrder = () => {
+
+    const newOrder = {...database.orderBuilder}  //clone the orderBuilder values 
+
+    const lastIndex = database.customOrders.length - 1  //will equal current last index/id value
+    newOrder.id = database.customOrders[lastIndex].id + 1 //will equal the index/id value to cloned orderBuilder data (in newOrder)
+
+    newOrder.timestamp = Date.now()  //adds timestamp value to cloned orderBuilder data (in newOrder)
+
+    database.customOrders.push(newOrder) //pushes the newOrder data collected above in this function to the end of customOrders
+
+    database.orderBuilder= {}  //resets orderBuilder object to empty object
+
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
