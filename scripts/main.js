@@ -8,3 +8,8 @@ const renderAllHTML = () => { //3. Finds function definition.  renderAllHTML() r
 
 renderAllHTML() //2. Calling function renderAllHTML().  Needs to find function definition.
 
+
+document.addEventListener("stateChanged", event => { //Re-renders html with updated orders list
+    console.log("State of data has changed. Regenerating HTML...")
+    renderAllHTML()
+})

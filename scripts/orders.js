@@ -1,7 +1,7 @@
 import { getOrders } from "./database.js"  //bring in customOrders state 
 
 
-const buildOrderListItem = (order) {  //creates html li for the new customOrder object
+const buildOrderListItem = (order) => {  //creates html li for the new customOrder object
     return `<li>
                 Order #${order.id} was placed on ${order.timestamp}
             </li>`

@@ -10,6 +10,12 @@ import { Orders } from "./orders.js"
 import { addCustomOrder } from "./database.js"
 
 
+document.addEventListener("click", clickEvent => {  //function - when user clicks on the order button, trigger ddCustomOrder() on database.js (changes transient order --> permanent order)
+    if (clickEvent.target.id === "orderButton") {
+        addCustomOrder() 
+    }
+})
+
 //We need an exportable function that will return our basic html.  Within the html, we'll interpolate a function from each of the modules imported above.  Those inner functions are responsible for getting the data we need from the database and making an html list with it to be plugged in to the html on this page.
 
 export const carsRUs = () => {

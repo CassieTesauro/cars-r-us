@@ -82,5 +82,5 @@ export const addCustomOrder = () => {
 
     database.orderBuilder= {}  //resets orderBuilder object to empty object
 
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    document.dispatchEvent(new CustomEvent("stateChanged")) //triggers event listener for "stateChanged" on main.js
 }
