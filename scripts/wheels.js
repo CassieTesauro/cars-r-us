@@ -13,7 +13,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "wheel") {
-            setWheel(parseInt(event.target.name))
+            setWheel(parseInt(event.target.value))
         }
     }
 )

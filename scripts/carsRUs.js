@@ -10,7 +10,9 @@ import { Orders } from "./orders.js"
 import { addCustomOrder } from "./database.js"
 
 
-document.addEventListener("click", clickEvent => {  //function - when user clicks on the order button, trigger ddCustomOrder() on database.js (changes transient order --> permanent order)
+document.addEventListener(
+    "click", 
+    (clickEvent) => {  //function - when user clicks on the order button, trigger addCustomOrder() on database.js (changes transient order --> permanent order)
     if (clickEvent.target.id === "orderButton") {
         addCustomOrder() 
     }
@@ -42,7 +44,7 @@ export const carsRUs = () => {
         </section>
     </article>
 
-    <article>
+    <article class= "purchase_button">
         <button id="orderButton">Build My Car</button>
     </article>
 

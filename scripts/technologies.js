@@ -12,7 +12,7 @@ const technologies = getTechnologies() //put return of technologies state export
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "techology") {
+        if (event.target.name === "technology") {
             setTechnology(parseInt(event.target.value))
         }
     }
