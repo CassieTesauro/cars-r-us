@@ -55,16 +55,16 @@ export const getOrders = () => {
 
 //set functions
 export const setPaintColor = (id) => {
-    database.customOrders.paintColorId = id
+    database.orderBuilder.paintColorId = id
 }
 export const setInterior = (id) => {
-    database.customOrders.interiorId = id
+    database.orderBuilder.interiorId = id
 }
 export const setTechnology = (id) => {
-    database.customOrders.technologyId = id
+    database.orderBuilder.technologyId = id
 }
 export const setWheel = (id) => {
-    database.customOrders.wheelId = id
+    database.orderBuilder.wheelId = id
 }
 
 //function for orderBuilder --> orders, AKA transient --> permanent order state
